@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer's Roadmap</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+        }
+
+        h1 {
+            position: relative;
+            font-size: 3rem;
+            color: #fff;
+            font-family: 'Helvetica', sans-serif;
+            z-index: 1;
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #007BFF;
+            animation: zoomInOut 5s infinite alternate;
+        }
+
+        @keyframes zoomInOut {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 50px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #fff;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .button {
+            margin: 10px;
+            padding: 15px 30px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: 2px solid transparent;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            font-family: 'Comic Sans MS', cursive;
+            display: inline-block;
+            animation: float 2s infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .button:hover {
+            background-color: #218838;
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(40, 167, 69, 0.5);
+        }
+
+        .button:hover::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: shake 0.5s linear infinite;
+            border-radius: 25px;
+            z-index: -1;
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+
+        .login-bar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            width: 100%;
+            text-align: right;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
+
+        .login-bar a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-bar a::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        .login-bar a:hover::before {
+            width: 0;
+            height: 0;
+            top: 50%;
+            left: 50%;
+        }
+
+        .login-bar a:hover {
+            transform: scale(1.2);
+        }
+
+        .login-bar a:last-child {
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-bar">
+        <a href="#">Sign Up</a>
+        <a href="#">Login</a>
+    </div>
+
+    <div class="container">
+        <h1>Welcome to Developer's Roadmap</h1>
+        <div id="particles-js"></div>
+        <div class="content">
+            <p>Explore different paths and technologies in the field of development!</p>
+            <div class="buttons">
+                <a class="button" href="#frontend">Frontend</a>
+                <a class="button" href="#backend">Backend</a>
+                <a class="button" href="#devops">DevOps</a>
+                <a class="button" href="#fullstack">Fullstack</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
